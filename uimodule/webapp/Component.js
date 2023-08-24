@@ -2,10 +2,10 @@
  * eslint-disable @sap/ui5-jsdocs/no-jsdoc
  */
 
-sap.ui.define(["sap/ui/core/UIComponent", "sap/ui/Device", "mta/MTA1/model/models"], function (UIComponent, Device, models) {
+sap.ui.define(["sap/ui/core/UIComponent", "sap/ui/Device", "CICDMTA/CICDMTA/model/models"], function (UIComponent, Device, models) {
     "use strict";
 
-    return UIComponent.extend("mta.MTA1.Component", {
+    return UIComponent.extend("CICDMTA.CICDMTA.Component", {
         metadata: {
             manifest: "json",
         },

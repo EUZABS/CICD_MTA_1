@@ -5,7 +5,7 @@ QUnit.config.autostart = false;
 sap.ui.getCore().attachInit(function () {
     "use strict";
 
-    sap.ui.require(["mta/MTA1/test/integration/AllJourneys"], function () {
+    sap.ui.require(["CICDMTA/CICDMTA/test/integration/AllJourneys"], function () {
         QUnit.start();
     });
 });

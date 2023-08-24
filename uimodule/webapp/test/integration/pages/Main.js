@@ -1,11 +1,9 @@
 sap.ui.require(["sap/ui/test/Opa5", "sap/ui/test/actions/Press"], function (Opa5, Press) {
     "use strict";
 
-    var sViewName = "mta.MTA1.view.MainView";
-
     Opa5.createPageObjects({
         onTheMainPage: {
-            viewName: sViewName,
+            viewName: "CICDMTA.CICDMTA.view.MainView",
 
             actions: {
                 // add action functions here
@@ -24,12 +22,12 @@ sap.ui.require(["sap/ui/test/Opa5", "sap/ui/test/actions/Press"], function (Opa5
                     return this.waitFor({
                         controlType: "sap.m.Title",
                         properties: {
-                            text: "Title of mta.MTA1",
+                            text: "Title of CICDMTA.CICDMTA",
                         },
                         success: function () {
                             Opa5.assert.ok(true, "The page shows the correct title");
                         },
-                        errorMessage: "App does not show the expected title mta.MTA1",
+                        errorMessage: "App does not show the expected title CICDMTA.CICDMTA",
                     });
                 },
             },

@@ -1,0 +1,23 @@
+{
+  "generator-template-ui5-project": {
+    "projectname": "CICDMTA",
+    "namespaceUI5": "CICDMTA",
+    "enableFPM": false,
+    "platform": "Application Router @ Cloud Foundry",
+    "viewtype": "XML",
+    "ui5libs": "Content delivery network (SAPUI5)",
+    "newdir": false,
+    "initrepo": true,
+    "namespaceURI": "CICDMTA",
+    "opa5pos": [
+      "Main"
+    ],
+    "opa5Journeys": [
+      "Main"
+    ],
+    "uimodules": [
+      "uimodule"
+    ],
+    "setupCompleted": true
+  }
+}

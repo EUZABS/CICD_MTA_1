@@ -6,8 +6,8 @@ sap.ui.define(
     function (Controller) {
         "use strict";
 
-        return Controller.extend("mta.MTA1.controller.MainView", {
+        return Controller.extend("CICDMTA.CICDMTA.controller.MainView", {
             onInit: function () {},
         });
-    }
+    },
 );

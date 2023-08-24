@@ -4,9 +4,6 @@ sap.ui.define(
         // "./pages/Main",
         "./pages/Main",
     ],
-    /**
-     * @param {typeof sap.ui.test.opaQunit} opaTest
-     */
     function (opaTest) {
         "use strict";
 
@@ -23,5 +20,5 @@ sap.ui.define(
             // Cleanup
             Then.iTeardownMyApp();
         });
-    }
+    },
 );

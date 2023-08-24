@@ -1,7 +1,7 @@
 {
   "_version": "1.42.0",
   "sap.app": {
-    "id": "mta.MTA1",
+    "id": "CICDMTA.CICDMTA",
     "type": "application",
     "i18n": "i18n/i18n.properties",
     "applicationVersion": {
@@ -48,7 +48,7 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "mta.MTA1.i18n.i18n"
+          "bundleName": "CICDMTA.CICDMTA.i18n.i18n"
         }
       }
     },
@@ -64,7 +64,7 @@
         "routerClass": "sap.m.routing.Router",
         "viewType": "XML",
         "async": true,
-        "viewPath": "mta.MTA1.view",
+        "viewPath": "CICDMTA.CICDMTA.view",
         "controlAggregation": "pages",
         "controlId": "app",
         "clearControlAggregation": false
@@ -89,7 +89,7 @@
       }
     },
     "rootView": {
-      "viewName": "mta.MTA1.view.App",
+      "viewName": "CICDMTA.CICDMTA.view.App",
       "type": "XML",
       "async": true,
       "id": "App"
