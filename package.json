@@ -2,7 +2,7 @@
   "dependencies": {
     "generator-easy-ui5": "^3.6.2"
   },
-  "name": "cicdmta",
+  "name": "CICDMTA",
   "version": "0.0.1",
   "scripts": {
     "start": "ui5 serve --config=uimodule/ui5.yaml  --open index.html",
