@@ -10,8 +10,8 @@
     "version": "0.0.1",
     "scripts": {
         "start": "ui5 serve --config=uimodule/ui5.yaml  --open index.html",
-        "build:ui": "run-s build:uimodule",
-        "test": "run-s lint karma",
+        "build:ui": "npm run build:uimodule",
+        "test": "run lint karma",
         "karma-ci": "karma start karma-ci.conf.js",
         "clearCoverage": "shx rm -rf coverage",
         "karma": "run-s clearCoverage karma-ci",
@@ -19,7 +19,7 @@
         "lint-fix": "eslint ./**/webapp/**/*.js --fix && prettier --plugin-search-dir=. --write ./**/webapp/**/*.{js,xml} --no-error-on-unmatched-pattern",
         "build:mta": "mbt build",
         "deploy:cf": "cross-var cf deploy mta_archives/CICDMTA_$npm_package_version.mtar",
-        "deploy": "run-s build:mta deploy:cf",
+        "deploy": "npm run build:mta deploy:cf",
         "build:uimodule": "ui5 build --config=uimodule/ui5.yaml --clean-dest --dest approuter/uimodule/webapp"
     },
     "devDependencies": {
