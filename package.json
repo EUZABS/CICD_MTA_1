@@ -1,7 +1,4 @@
 {
-    "dependencies": {
-        "run-s": "^0.0.0"
-    },
     "engines": {
         "node": "16.X"
     },
