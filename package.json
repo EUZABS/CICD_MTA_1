@@ -37,6 +37,7 @@
         "shx": "^0.3.4",
         "ui5-middleware-cfdestination": "latest",
         "ui5-middleware-livereload": "latest",
-        "ui5-task-zipper": "latest"
+        "ui5-task-zipper": "latest",
+        "run-s": "^0.0.0"
     }
 }
