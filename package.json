@@ -2,6 +2,9 @@
     "dependencies": {
         "generator-easy-ui5": "^3.6.2"
     },
+    "engines": {
+        "node": "16.X"
+    },
     "name": "cicdmta",
     "version": "0.0.1",
     "scripts": {
