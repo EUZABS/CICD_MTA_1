@@ -19,7 +19,7 @@
         "lint-fix": "eslint ./**/webapp/**/*.js --fix && prettier --plugin-search-dir=. --write ./**/webapp/**/*.{js,xml} --no-error-on-unmatched-pattern",
         "build:mta": "mbt build",
         "deploy:cf": "cross-var cf deploy mta_archives/CICDMTA_$npm_package_version.mtar",
-        "deploy": "npm run build:mta deploy:cf",
+        "deploy": "cross-var cf deploy mta_archives/CICDMTA_$npm_package_version.mtar",
         "build:uimodule": "ui5 build --config=uimodule/ui5.yaml --clean-dest --dest approuter/uimodule/webapp"
     },
     "devDependencies": {
