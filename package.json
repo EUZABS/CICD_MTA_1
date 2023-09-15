@@ -1,6 +1,6 @@
 {
     "engines": {
-        "node": "16.X"
+        "node": "^14.X"
     },
     "name": "cicdmta",
     "version": "0.0.1",
