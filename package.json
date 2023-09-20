@@ -7,7 +7,7 @@
     "scripts": {
         "start": "ui5 serve --config=uimodule/ui5.yaml  --open index.html",
         "build:ui": "npm run build:uimodule",
-        "test": "run lint karma",
+        "test": "npm run lint karma",
         "karma-ci": "karma start karma-ci.conf.js",
         "clearCoverage": "shx rm -rf coverage",
         "karma": "run-s clearCoverage karma-ci",

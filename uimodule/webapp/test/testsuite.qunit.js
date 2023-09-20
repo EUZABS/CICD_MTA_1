@@ -8,6 +8,8 @@ window.suite = function () {
     // eslint-disable-next-line
     oSuite.addTestPage(sContextPath + "integration/opaTests.qunit.html");
 
+    oSuite.addTestPage(sContextPath + "unit/unitTest.qunit.html");
+
     // eslint-disable-next-line
     return oSuite;
 };
