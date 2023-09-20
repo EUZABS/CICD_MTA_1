@@ -10,7 +10,7 @@
         "test": "npm run lint karma",
         "karma-ci": "karma start karma-ci.conf.js",
         "clearCoverage": "shx rm -rf coverage",
-        "karma": "run-s clearCoverage karma-ci",
+        "karma": "npm run clearCoverage karma-ci",
         "lint": "eslint ./**/webapp/**/*.js && prettier --plugin-search-dir=. --check ./**/webapp/**/*.{js,xml} --no-error-on-unmatched-pattern",
         "lint-fix": "eslint ./**/webapp/**/*.js --fix && prettier --plugin-search-dir=. --write ./**/webapp/**/*.{js,xml} --no-error-on-unmatched-pattern",
         "build:mta": "mbt build",
