@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.epiuse.mtaservice.services.UserManager;
 import java.util.*;
 import reactor.core.publisher.Mono;
+import com.epiuse.mtaservice.dto.UserDTO;
 
 @RestController
 @RequestMapping("/v1/users")
@@ -21,11 +22,12 @@ public class UserController {
     }
 
     @GetMapping(value = "/welcome")
-    public String handleWelcome(@RequestParam(value = "personIdExternal", defaultValue = "Enthusiast") String personIdExternal) {
+    public String handleWelcome(
+            @RequestParam(value = "personIdExternal", defaultValue = "Enthusiast") String personIdExternal) {
         return personIdExternal;
     }
 
-    @GetMapping(value="/users")
+    @GetMapping(value = "/users")
     public Mono<String> getUsers() {
         return userManager.getUserProfiles();
     }

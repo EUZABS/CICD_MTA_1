@@ -12,8 +12,6 @@ import lombok.ToString;
 
 public class UserDTO {
 	private String personIdExternal;
-	private String title;
 	private String firstName;
 	private String lastName;
-    private String gender;
 }
