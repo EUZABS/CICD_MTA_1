@@ -1,12 +1,9 @@
 package com.epiuse.mtaservice.services;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
-import com.epiuse.mtaservice.dto.UserDTO;
 
 import reactor.core.publisher.Mono;
-
+import com.epiuse.mtaservice.dto.UserDTO;
 import java.util.*;
 
 @Component
@@ -14,7 +11,6 @@ public class UserManager {
 
     private final SuccessFactorsService sfService;
 
-    @Autowired
     public UserManager(SuccessFactorsService sfService) {
         this.sfService = sfService;
     }

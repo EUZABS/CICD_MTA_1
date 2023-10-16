@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.epiuse.mtaservice.services.UserManager;
-import com.epiuse.mtaservice.dto.UserDTO;
 import java.util.*;
+import reactor.core.publisher.Mono;
 
 @RestController
 @RequestMapping("/v1/users")
@@ -26,7 +26,7 @@ public class UserController {
     }
 
     @GetMapping(value="/users")
-    public List<UserDTO> getUsers() {
+    public Mono<String> getUsers() {
         return userManager.getUserProfiles();
     }
 }
