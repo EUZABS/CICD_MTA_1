@@ -1,10 +1,13 @@
 package com.epiuse.mtaservice.rest;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+
 import com.epiuse.mtaservice.services.UserManager;
 import java.util.*;
 import reactor.core.publisher.Mono;
@@ -27,8 +30,15 @@ public class UserController {
         return personIdExternal;
     }
 
-    @GetMapping(value = "/users")
+    @GetMapping(value = "/allUsers")
     public Mono<String> getUsers() {
         return userManager.getUserProfiles();
+    }
+
+    @GetMapping(value = "/byId/{personIdExternal}")
+    public Mono<ResponseEntity<String>> getUserById(@PathVariable String personIdExternal) {
+        return userManager.getUserById(personIdExternal)
+                .map(response -> ResponseEntity.ok(response))
+                .defaultIfEmpty(ResponseEntity.notFound().build());
     }
 }

@@ -12,7 +12,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @Service
 public class SuccessFactorsService {
     private WebClient webClient;
-    private final ObjectMapper objectMapper;
+    private String baseUrl;
+    private final String perPersonal = "/PerPersonal";
 
     // Connect to SuccessFactors api
     public SuccessFactorsService(ObjectMapper objectMapper, WebClient.Builder webClientBuilder,
@@ -30,17 +31,32 @@ public class SuccessFactorsService {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-        this.objectMapper = objectMapper;
+        this.baseUrl = apiUrl;
     }
 
     // Get user profiles
     public Mono<String> getUserProfiles() {
-        String baseUrl = "https://apisalesdemo8.successfactors.com/odata/v2/PerPersonal";
         String selectFields = "firstName,lastName,personIdExternal";
-        String url = UriComponentsBuilder.fromHttpUrl(baseUrl)
+        String url = UriComponentsBuilder.fromHttpUrl(baseUrl + perPersonal)
                 .queryParam("$format", "json")
                 .queryParam("$top", 10)
                 .queryParam("$select", selectFields)
+                .build().toUriString();
+        System.out.println(url);
+        return this.webClient.get()
+                .uri(url)
+                .retrieve()
+                .bodyToMono(String.class);
+    }
+
+    public Mono<String> getUserById(String id) {
+        String selectFields = "firstName,lastName,personIdExternal";
+        String filterFields = "personIdExternal eq " + id;
+        String url = UriComponentsBuilder.fromHttpUrl(baseUrl + perPersonal)
+                .queryParam("$format", "json")
+                .queryParam("$top", 10)
+                .queryParam("$select", selectFields)
+                .queryParam("$filter", filterFields)
                 .build().toUriString();
 
         return this.webClient.get()

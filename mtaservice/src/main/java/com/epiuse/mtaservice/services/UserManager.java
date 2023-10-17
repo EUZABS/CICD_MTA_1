@@ -19,31 +19,12 @@ public class UserManager {
         this.objectMapper = objectMapper;
     }
 
-    // Dummy request
-    // public List<UserDTO> getUserProfiles() {
-    // List<UserDTO> userProfiles = new ArrayList<>();
-    // userProfiles.add(new UserDTO("10000", "Mr", "Jack", "Black", "M"));
-    // return userProfiles;
-    // }
-
     public Mono<String> getUserProfiles() {
         return sfService.getUserProfiles();
-        // .map(returnArray -> {
-        // System.out.println(returnArray);
-        // try {
-        // UserDTOWrapper wrapper = objectMapper.readValue(returnArray,
-        // UserDTOWrapper.class);
-        // List<UserDTO> userDTOList = wrapper.getResults();
-        // return userDTOList;
-        // } catch (Exception e) {
-        // // Handle the exception (e.g., log it) and return an empty array or throw an
-        // // error
-        // System.out.println(e.getMessage());
-        // return null;
-        // }
-        // })
-        // .block();
+    }
 
+    public Mono<String> getUserById(String id) {
+        return sfService.getUserById(id);
     }
 
 }
