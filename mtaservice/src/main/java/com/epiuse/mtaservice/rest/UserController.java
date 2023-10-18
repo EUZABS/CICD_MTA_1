@@ -31,8 +31,8 @@ public class UserController {
     }
 
     @GetMapping(value = "/allUsers")
-    public Mono<String> getUsers() {
-        return userManager.getUserProfiles();
+    public Mono<String> getUsers(@RequestParam(required = false) String top) {
+        return userManager.getUserProfiles(top);
     }
 
     @GetMapping(value = "/byId/{personIdExternal}")
@@ -41,4 +41,12 @@ public class UserController {
                 .map(response -> ResponseEntity.ok(response))
                 .defaultIfEmpty(ResponseEntity.notFound().build());
     }
+
+    // @GetMapping(value = "/byName/{name}")
+    // public Mono<ResponseEntity<String>> getUserByName(@PathVariable String name)
+    // {
+    // return userManager.getUserByName(name)
+    // .map(response -> ReponseEntity.ok(response))
+    // .defaultIfEmpty(ResponseEntity.notFound().build());
+    // }
 }

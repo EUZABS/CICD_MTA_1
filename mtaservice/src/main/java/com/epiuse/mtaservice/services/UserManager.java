@@ -1,5 +1,6 @@
 package com.epiuse.mtaservice.services;
 
+import org.apache.tomcat.util.json.JSONParser;
 import org.springframework.stereotype.Component;
 
 import reactor.core.publisher.Mono;
@@ -19,12 +20,16 @@ public class UserManager {
         this.objectMapper = objectMapper;
     }
 
-    public Mono<String> getUserProfiles() {
-        return sfService.getUserProfiles();
+    public Mono<String> getUserProfiles(String top) {
+        return sfService.getUserProfiles(top);
     }
 
     public Mono<String> getUserById(String id) {
         return sfService.getUserById(id);
+    }
+
+    public Mono<String> getUserByName(String name) {
+        return sfService.getUserByName(name);
     }
 
 }
