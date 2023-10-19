@@ -1,0 +1,52 @@
+{
+    "VCAP_SERVICES": {
+        "destination": [
+            {
+                "binding_guid": "de349bcc-cf66-48f9-a685-68180d9f1117",
+                "binding_name": null,
+                "credentials": {
+                    "clientid": "sb-cloneba98d6bf103f42768074c6a5db8a58ca!b3448|destination-xsappname!b5",
+                    "clientsecret": "de349bcc-cf66-48f9-a685-68180d9f1117$yeGs-C2Y3ffcaqqiMVL3_6LwszYUPkNrJ47mZu_oFkw=",
+                    "credential-type": "binding-secret",
+                    "identityzone": "euaf-free-tier-hosting-jblqyqdo",
+                    "instanceid": "ba98d6bf-103f-4276-8074-c6a5db8a58ca",
+                    "tenantid": "e0f6219b-9179-4e2a-9d7e-47ec528628a9",
+                    "tenantmode": "dedicated",
+                    "uaadomain": "authentication.jp10.hana.ondemand.com",
+                    "uri": "https://destination-configuration.cfapps.jp10.hana.ondemand.com",
+                    "url": "https://euaf-free-tier-hosting-jblqyqdo.authentication.jp10.hana.ondemand.com",
+                    "verificationkey": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAznMvcLqfNhcwznbXCeZx\nTnFbLgu1jISCTDMsxCDA0F18yPNeeegKheFNjplwbDXixOZg+5kpfvWV5a12evLn\nD/vysnp89kkeHk4lyr47S2vvqWksi+5tLn+eBzg8HHwHqtfU0BfwN9hdxrSDQQFh\nseekzFVYsSc+FSftkbm3/20TeFrfWqrNHr04v2W2aAJZCTBFnWWJenjH9F9CuQyW\n36wN9/BAC5w3o2L4mXi24XLBdc/QPw2U1sIj3Z1IbeKqWGB5Yd0gCy8Qg6ddQjZs\n0dxdIEiryIuCYh+Cvr/tSpd/aE+e5cKPk2TldaulSBjU82m/b9/NxMCG87wbxJ1Z\n8wIDAQAB\n-----END PUBLIC KEY-----",
+                    "xsappname": "cloneba98d6bf103f42768074c6a5db8a58ca!b3448|destination-xsappname!b5"
+                },
+                "instance_guid": "ba98d6bf-103f-4276-8074-c6a5db8a58ca",
+                "instance_name": "CICDMTA_destination",
+                "label": "destination",
+                "name": "CICDMTA_destination",
+                "plan": "lite",
+                "provider": null,
+                "syslog_drain_url": null,
+                "tags": ["destination", "conn", "connsvc"],
+                "volume_mounts": []
+            }
+        ]
+    },
+    "VCAP_APPLICATION": {
+        "application_id": "a7bb98d8-af6b-4b3b-8f03-02ada686bf35",
+        "application_name": "CICDMTA",
+        "application_uris": ["epi-use-africa--pty--ltd-euaf-free-tier-hosting-jblqyqd46f35414.cfapps.jp10.hana.ondemand.com"],
+        "application_version": "fc2876c6-3c68-48d3-adf1-99cd9b1257f4",
+        "cf_api": "https://api.cf.jp10.hana.ondemand.com",
+        "limits": { "disk": 512, "fds": 32768, "mem": 512 },
+        "name": "CICDMTA",
+        "organization_id": "93ec289f-e14b-4c32-8c12-f09ebef00c2a",
+        "organization_name": "Epi-Use Africa (Pty) Ltd_euaf-free-tier-hosting-jblqyqdo",
+        "process_id": "a7bb98d8-af6b-4b3b-8f03-02ada686bf35",
+        "process_type": "web",
+        "space_id": "822c2849-c92c-455a-b6b5-16843c8e353d",
+        "space_name": "Dev",
+        "uris": ["epi-use-africa--pty--ltd-euaf-free-tier-hosting-jblqyqd46f35414.cfapps.jp10.hana.ondemand.com"],
+        "users": null,
+        "version": "fc2876c6-3c68-48d3-adf1-99cd9b1257f4"
+    },
+    "DEPLOY_ATTRIBUTES": "{\n  \"app-content-digest\" : \"F7A74C224D3DEB394AA6B92DC53CAA8D\"\n}"
+}
