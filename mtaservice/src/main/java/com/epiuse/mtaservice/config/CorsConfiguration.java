@@ -1,4 +1,4 @@
-package com.epiuse.mtaservice;
+package com.epiuse.mtaservice.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

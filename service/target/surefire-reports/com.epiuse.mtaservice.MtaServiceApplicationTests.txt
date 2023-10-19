@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.epiuse.mtaservice.MtaServiceApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.083 s - in com.epiuse.mtaservice.MtaServiceApplicationTests
