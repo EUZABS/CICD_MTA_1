@@ -16,9 +16,9 @@ public class SuccessFactorsService {
 
         // Connect to SuccessFactors api
         public SuccessFactorsService(ObjectMapper objectMapper, WebClient.Builder webClientBuilder,
-                        @Value("${sf.api.url}") String apiUrl,
-                        @Value("${sf.api.username}") String username,
-                        @Value("${sf.api.password}") String password) {
+                        @Value("${spring.datasource.url}") String apiUrl,
+                        @Value("${spring.datasource.username}") String username,
+                        @Value("${spring.datasource.password}") String password) {
 
                 try {
                         this.webClient = webClientBuilder

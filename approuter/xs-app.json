@@ -1,15 +1,21 @@
 {
-  "welcomeFile": "uimodule/index.html",
-  "authenticationMethod": "none",
-  "logout": {
-    "logoutEndpoint": "/do/logout"
-  },
-  "routes": [
-    {
-      "source": "^/uimodule/(.*)$",
-      "target": "$1",
-      "authenticationType": "none",
-      "localDir": "uimodule/webapp"
-    }
-  ]
+    "welcomeFile": "uimodule/index.html",
+    "authenticationMethod": "none",
+    "logout": {
+        "logoutEndpoint": "/do/logout"
+    },
+    "routes": [
+        {
+            "source": "^/uimodule/(.*)$",
+            "target": "$1",
+            "authenticationType": "none",
+            "localDir": "uimodule/webapp"
+        },
+        {
+            "source": "^/sfService/(.*)$",
+            "target": "$1",
+            "destination": "cicdmta_service",
+            "csrfProtection": false
+        }
+    ]
 }
