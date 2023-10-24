@@ -62,8 +62,7 @@
 			<groupId>com.sap.cloud.security.xsuaa</groupId>
 			<artifactId>xsuaa-spring-boot-starter</artifactId>
 			<version>3.2.0</version>
-		</dependency>
-		
+		</dependency>		
 	</dependencies>
 
 	<build>
@@ -72,6 +71,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			
 		</plugins>
 	</build>
 
