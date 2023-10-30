@@ -1,8 +1,8 @@
 ---
 applications:
-- name: cicdmta-service
-  path: ./target/mta-service-0.0.1-SNAPSHOT.jar
-  memory: 1024M
-  services:
-  - cicdmta-srv-uaa
-  - destination
+    - name: cicdmta-service
+      path: ./target/mta-service-0.0.1-SNAPSHOT.jar
+      memory: 1024M
+      services:
+          - cicdmta-srv-uaa
+          - destination

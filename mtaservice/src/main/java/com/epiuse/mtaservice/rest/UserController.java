@@ -5,44 +5,38 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import javax.print.attribute.standard.Destination;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import com.sap.cloud.sdk.cloudplatform.connectivity.DestinationLoader;
-import com.sap.cloud.sdk.cloudplatform.connectivity.ScpCfDestinationLoader;
-import com.epiuse.mtaservice.services.UserManager;
-import java.util.*;
 import reactor.core.publisher.Mono;
-import com.epiuse.mtaservice.dto.UserDTO;
-import com.sap.cloud.sdk.cloudplatform.connectivity.Destination;
+import com.epiuse.mtaservice.services.UserManager;
 import com.sap.cloud.sdk.cloudplatform.connectivity.HttpDestination;
-import com.sap.cloud.sdk.cloudplatform.connectivity.DestinationAccessor;
-
+import com.epiuse.mtaservice.destination.DestinationConfiguration;
 
 @RestController
 @RequestMapping("/v1/users")
 public class UserController {
 
     private final UserManager userManager;
-    private String destinationName = "SF_oauth";
-    private HttpDestination destination;
+    private final DestinationConfiguration destinationConfig;
+
     @Autowired
-    public UserController(UserManager userManager) {
+    public UserController(UserManager userManager, DestinationConfiguration destinationConfig) {
         this.userManager = userManager;
-        try {
-            this.destination = DestinationAccessor.getDestination(destinationName).asHttp();
-        }
-        catch (Exception e) {
-            System.out.println("Error: " + e.getMessage());
-        }
+        this.destinationConfig = destinationConfig;
     }
 
-    @GetMapping(value = "/welcome")
-    public HttpDestination handleWelcome() {
-        return destination;
+    @GetMapping(value = "/test")
+    public String test() {
+        // HttpDestination httpDest = this.destinationConfig.getDestination();
+        return "Working";
     }
 
     @GetMapping(value = "/allUsers")
     public Mono<String> getUsers(@RequestParam(required = false) String top) {
+        // HttpDestination httpDest = this.destinationConfig.getDestination();
         return userManager.getUserProfiles(top);
     }
 

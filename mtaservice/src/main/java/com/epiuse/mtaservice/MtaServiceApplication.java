@@ -9,7 +9,8 @@ import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfigurat
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan({ "com.epiuse.mtaservice" , "com.epiuse.mtaservice.rest" , "com.epiuse.mtaservice.config"} )
+@ComponentScan({ "com.epiuse.mtaservice", "com.epiuse.mtaservice.rest", "com.epiuse.mtaservice.config",
+		"com.epiuse.ntaservice.destination" })
 public class MtaServiceApplication {
 
 	public static void main(String[] args) {

@@ -1,19 +1,17 @@
 {
     "xsappname": "cicdmta-service",
-    "tenant-mode": "dedicated",
+    "tenant-mode": "shared",
     "scopes": [
         {
-          "name": "$XSAPPNAME.Display",
-          "description": "Display content"
+            "name": "$XSAPPNAME.Display",
+            "description": "Display content"
         }
-      ],
-      "role-templates": [
+    ],
+    "role-templates": [
         {
-          "name": "Viewer",
-          "description": "View content",
-          "scope-references": [
-            "$XSAPPNAME.Display"
-          ]
+            "name": "Viewer",
+            "description": "View content",
+            "scope-references": ["$XSAPPNAME.Display"]
         }
     ]
 }
